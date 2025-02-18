@@ -33,12 +33,57 @@ function App() {
     
     setData(updatedFileData);
   }
+
+  const addNewFile = (id) =>{
+    const name = prompt("enter new file!");
+
+    const updateFileData = (fileData) =>{
+      return fileData.map((file)=>{
+        if(file.id === id){
+          return {
+            ...file,
+            children:[
+              {name, id:`${name}_new_file`,isFolder:false},
+              ...file.children
+            ]
+          }
+        }
+        if(file.isFolder){
+          return {...file,children:updateFileData(file.children)}
+        }
+        return file;
+      })
+    }
+
+    setData(updateFileData(data));
+
+  }
+
+  const deleteElement = (id) =>{    
+    const deleteFileData = (fileData) =>{
+      return fileData.filter((file) =>{
+        if(file.id === id)
+        {
+          return false;
+        }
+        if(file.isFolder){         
+            file.children = deleteFileData(file.children)
+        }
+        return true
+      })      
+    }
+    setData(deleteFileData(data))
+
+  }
+
   return (
     <div className="App">
       <h1>File Explorer</h1>
       <List 
         fileData = {data} 
         addNewFolder = {addNewFolder}
+        addNewFile = {addNewFile}
+        deleteElement = {deleteElement}
       />
     </div>
   );

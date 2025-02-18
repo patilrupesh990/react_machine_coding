@@ -15,14 +15,17 @@
     vertical-align: middle;
 }
 
-.add-folder-icon{
+.add-folder-icon, .add-file-icon{
     display: none;
     height: 15px;
     width: 15px;
     vertical-align: middle;
     margin-left: 20px;
 }
-.main:hover .add-folder-icon{
+.add-file-icon{
+    margin-left: 10px;
+}
+.main:hover .add-folder-icon,.main:hover .add-file-icon{
     display: inline-block;
 } 
 
