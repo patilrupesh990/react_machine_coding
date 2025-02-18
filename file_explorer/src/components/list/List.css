@@ -14,3 +14,15 @@
     width: 30px;
     vertical-align: middle;
 }
+
+.add-folder-icon{
+    display: none;
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+.main:hover .add-folder-icon{
+    display: inline-block;
+} 
+

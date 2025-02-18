@@ -2,26 +2,35 @@
     {
         "name":"public",
         "isFolder":true,
-        "children":[]
+        "children":[],
+        "id":"1"
     },
     {
         "name":"src",
         "isFolder":true,
+        "id":"2",
         "children":[
             {
                 "name":"App.js",
-                "isFolder":false
+                "isFolder":false,
+                "id":"3"
             },
             {
                 "name":"App.css",
-                "isFolder":false
+                "isFolder":false,
+                "id":"4"
             },
             {
                 "name":"index.js",
-                "isFolder":false
+                "isFolder":false,
+                "id":"5"
             }
-            
         ]
+    },
+    {
+        "name":"package.json",
+        "isFolder":false,
+        "id":"6"
     }
 
 ]
