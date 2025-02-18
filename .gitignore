@@ -4,6 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
+/file_explorer/node_modules
+/react_app
+/React_app_with_parcel
 
 # testing
 /coverage
