@@ -1,0 +1,28 @@
+.container{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.folder-icon{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.file-icon{
+    height: 30px;
+    width: 30px;
+    vertical-align: middle;
+}
+
+.add-folder-icon{
+    display: none;
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+.main:hover .add-folder-icon{
+    display: inline-block;
+} 
+
